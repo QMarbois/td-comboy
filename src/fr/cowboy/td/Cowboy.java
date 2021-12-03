@@ -26,4 +26,8 @@ public class Cowboy extends Humain{
         dame.released(this);
     }
 
+    @Override
+    public void introduce() {
+        super.introduce();
+    }
 }
