@@ -5,8 +5,8 @@ public class Dame extends Humain{
     private String dressColor;
     private Boolean isFree;
 
-    public Dame(String name, String drink, String dressColor) {
-        super(name, drink);
+    public Dame(String name, String dressColor) {
+        super(name, "lait");
         this.dressColor= dressColor;
         this.isFree = true;
     }

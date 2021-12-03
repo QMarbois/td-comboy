@@ -7,8 +7,8 @@ public class Brigand extends Humain{
     private double reward;
     private Boolean prisonner;
 
-    public Brigand(String name, String drink) {
-        super(name, drink);
+    public Brigand(String name) {
+        super(name, "tord-boyaux");
         this.look = "Méchant";
         this.kidnaping = 0;
         this.reward = 100.00;

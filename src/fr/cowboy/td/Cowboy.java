@@ -5,8 +5,8 @@ public class Cowboy extends Humain{
     private int popularity;
     private String characteristic;
 
-    public Cowboy(String name, String drink) {
-        super(name, drink);
+    public Cowboy(String name) {
+        super(name, "whisky");
         this.popularity = 0;
         this.characteristic = "Vaillant";
     }
