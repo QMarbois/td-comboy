@@ -5,8 +5,8 @@ public class Cowboy extends Humain{
     private int popularity;
     private String characteristic;
 
-    public Cowboy(String name) {
-        super(name);
+    public Cowboy(String name, String drink) {
+        super(name, drink);
         this.popularity = 0;
         this.characteristic = "Vaillant";
     }
@@ -24,6 +24,13 @@ public class Cowboy extends Humain{
     public void releaseWomen(Dame dame){
         this.talk("Eh mademoiselle, vous êtes charmante et désormais libre !");
         dame.released(this);
+    }
+
+    @Override
+    public void introduce() {
+        super.introduce();
+        this.talk("Les autres disent que je suis " + this.characteristic + " ! Et c'est un fait je le suis !");
+        this.talk("Mon niveau de popularité est de " + this.popularity);
     }
 
 }
