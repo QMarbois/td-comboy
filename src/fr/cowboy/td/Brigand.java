@@ -7,8 +7,8 @@ public class Brigand extends Humain{
     private double reward;
     private Boolean prisonner;
 
-    public Brigand(String name) {
-        super(name);
+    public Brigand(String name, String drink) {
+        super(name, drink);
         this.look = "Méchant";
         this.kidnaping = 0;
         this.reward = 100.00;
@@ -47,5 +47,12 @@ public class Brigand extends Humain{
     @Override
     public String getName() {
         return super.getName() + " le " + this.look;
+    }
+
+    @Override
+    public void introduce() {
+        super.introduce();
+        this.talk("je suis " + this.look + " et j'ai kidnappé " + this.kidnaping + " dames!");
+        this.talk("Ma tête est mise à prix à " + this.reward + " $");
     }
 }

@@ -5,8 +5,8 @@ public class Dame extends Humain{
     private String dressColor;
     private Boolean isFree;
 
-    public Dame(String name, String dressColor) {
-        super(name);
+    public Dame(String name, String drink, String dressColor) {
+        super(name, drink);
         this.dressColor= dressColor;
         this.isFree = true;
     }
@@ -33,5 +33,11 @@ public class Dame extends Humain{
     @Override
     public String getName() {
         return "Miss " + super.getName();
+    }
+
+    @Override
+    public void introduce() {
+        super.introduce();
+        this.talk("Avez vous vu que ma robe est " + this.dressColor + " ? Elle est magnifique n'est ce pas ?");
     }
 }

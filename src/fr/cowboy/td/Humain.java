@@ -9,6 +9,11 @@ public class Humain {
         this.drink = "Water";
     }
 
+    public Humain(String name, String drink){
+        this.name = name;
+        this.drink = drink;
+    }
+
     public void talk(String text){
         System.out.println("(" + name + ") - " + text);
     }
@@ -28,4 +33,5 @@ public class Humain {
     public String getDrink() {
         return this.drink;
     }
+
 }
