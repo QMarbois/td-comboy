@@ -1,6 +1,6 @@
 package fr.cowboy.td;
 
-public class Cowboy extends Humain{
+public class Cowboy extends Humain implements VisagePale{
 
     private int popularity;
     private String characteristic;
@@ -31,6 +31,11 @@ public class Cowboy extends Humain{
         super.introduce();
         this.talk("Les autres disent que je suis " + this.characteristic + " ! Et c'est un fait je le suis !");
         this.talk("Mon niveau de popularité est de " + this.popularity);
+    }
+
+    @Override
+    public void scalp() {
+        talk("Aïe ma tête !");
     }
 
 }

@@ -1,6 +1,6 @@
 package fr.cowboy.td;
 
-public class Brigand extends Humain implements Outlaw{
+public class Brigand extends Humain implements Outlaw, VisagePale{
 
     private String look;
     private int kidnaping;
@@ -60,5 +60,10 @@ public class Brigand extends Humain implements Outlaw{
         super.introduce();
         this.talk("je suis " + this.look + " et j'ai kidnappé " + this.kidnaping + " dames!");
         this.talk("Ma tête est mise à prix à " + this.reward + " $");
+    }
+
+    @Override
+    public void scalp() {
+        talk("Aïe ma tête !");
     }
 }

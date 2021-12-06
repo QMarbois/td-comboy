@@ -1,6 +1,6 @@
 package fr.cowboy.td;
 
-public class Dame extends Humain{
+public class Dame extends Humain implements VisagePale{
 
     private String dressColor;
     private Boolean isFree;
@@ -39,5 +39,10 @@ public class Dame extends Humain{
     public void introduce() {
         super.introduce();
         this.talk("Avez vous vu que ma robe est " + this.dressColor + " ? Elle est magnifique n'est ce pas ?");
+    }
+
+    @Override
+    public void scalp() {
+        talk("Aïe ma tête !");
     }
 }
