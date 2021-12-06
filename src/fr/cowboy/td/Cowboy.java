@@ -15,10 +15,10 @@ public class Cowboy extends Humain{
         this.popularity += popularity;
     }
 
-    public void shoot(Brigand brigand){
-        System.out.println("Le " + this.characteristic + " " + this.getName() + " tire sur " + brigand.getName() + ". PAN!");
+    public void shoot(Outlaw outlaw){
+        System.out.println("Le " + this.characteristic + " " + this.getName() + " tire sur " + outlaw.getName() + ". PAN!");
         this.talk("Prend ca, rascal !");
-        brigand.capture(this);
+        outlaw.toJail(this);
     }
 
     public void releaseWomen(Dame dame){
@@ -33,6 +33,6 @@ public class Cowboy extends Humain{
         this.talk("Mon niveau de popularité est de " + this.popularity);
     }
 
-    }
+}
 
 

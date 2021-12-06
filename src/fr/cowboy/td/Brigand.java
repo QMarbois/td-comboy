@@ -1,6 +1,6 @@
 package fr.cowboy.td;
 
-public class Brigand extends Humain{
+public class Brigand extends Humain implements Outlaw{
 
     private String look;
     private int kidnaping;
@@ -16,6 +16,12 @@ public class Brigand extends Humain{
 
     }
 
+    @Override
+    public void toJail(Cowboy cowboy) {
+        this.talk("Damned, je suis fait ! " + cowboy.getName() + " tu m'as eu chien !");
+        this.setPrisonner();
+    }
+
     public void kidnap (Dame dame){
         this.talk("Ah ah ! " + dame.getName() + ", tu es mienne désormais !");
         dame.kidnaped();
@@ -25,7 +31,7 @@ public class Brigand extends Humain{
 
     public void capture (Cowboy cowboy){
         this.talk("Damned, je suis fait ! " + cowboy.getName() + " tu m'as eu chien !");
-        this.setPrisonner();
+        //this.setPrisonner();
     }
 
     public double getReward() {
